@@ -1,11 +1,13 @@
-const express = require('express'); // Import du package Express
-const auth = require('../middleware/auth'); // Import du middleware qui gère l'authentification
-const upload = require('../middleware/upload'); // Import du middleware qui gère le téléchargement de fichiers
-const format = require('../middleware/format'); // Import du middleware qui gère le formattage de fichiers
-const router = express.Router(); // Création d'un router avec la méthode .Router() d'Express
+const express = require('express');
 
-// const Book = require('../models/Book') // Import du modèle 'Book'
-const bookCtrl = require('../controllers/books'); // Import des fonctions
+// Import des middleware
+const auth = require('../middleware/auth'); // Gestion de l'authentification
+const upload = require('../middleware/upload'); // Gestion du téléchargement des fichiers
+const format = require('../middleware/format'); // Gestion de l'optimisation des fichiers
+const bookCtrl = require('../controllers/books'); // Exécution des actions dans la BDD 'Book'
+
+// Création d'un router
+const router = express.Router();
 
 // PARAMETRAGE DES ROUTES //
 
@@ -30,4 +32,5 @@ router.put('/:id', auth, upload, format, bookCtrl.updateBook); // IL FAUT SUPPRI
 // Route pour supprimer un livre de la base de données (DELETE)
 router.delete('/:id', auth, bookCtrl.deleteBook);
 
-module.exports = router; // Export du router
+// Export du router
+module.exports = router;
