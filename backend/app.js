@@ -40,4 +40,4 @@ app.use('/api/books', booksRoutes);
 app.use('/api/auth', userRoutes);
 app.use('/images', express.static(path.join(__dirname, 'images'))); // Multer
 
-module.exports = app; // Export de l'application pour pouvoir y accéder depuis les autres fichiers du projet (notamment le serveur node)
+module.exports = app;

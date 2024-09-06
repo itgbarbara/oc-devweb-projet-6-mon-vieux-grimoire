@@ -24,10 +24,10 @@ router.get('/:id', bookCtrl.getOneBook);
 router.post('/:id/rating', auth, bookCtrl.rateBook);
 
 // Route pour créer un nouveau livre dans la base de données (POST)
-router.post('/', auth, upload, format, bookCtrl.addBook); // => /!\ Impossible de créer plusieurs livres avec le même compte utilisateur
+router.post('/', auth, upload, format, bookCtrl.addBook);
 
 // Route pour mettre à jour un livre dans la base de données (PUT)
-router.put('/:id', auth, upload, format, bookCtrl.updateBook); // IL FAUT SUPPRIMER L'ANCIEN FICHIER
+router.put('/:id', auth, upload, format, bookCtrl.updateBook);
 
 // Route pour supprimer un livre de la base de données (DELETE)
 router.delete('/:id', auth, bookCtrl.deleteBook);

@@ -77,9 +77,11 @@ exports.rateBook = (req, res) => {
 
 // Logique pour enregistrer un nouveau livre dans la base de données
 exports.addBook = (req, res) => {
-  const bookObject = JSON.parse(req.body.book); // Le corps de la requête contient une chaîne de caractère 'book', qui est un objet Book converti en string. Il faut le convertir
+  const bookObject = JSON.parse(req.body.book); // Le corps de la requête contient une chaîne de caractères 'book', qui est un objet Book converti en string.
+
   delete bookObject._id; // Suppression du faux id envoyé par le front-end
   delete bookObject._userId; // Suppression du champs UserId envoyé par le front-end pour éviter les fraudes
+
   const book = new Book({
     // Création d'un nouveau livre
     ...bookObject,

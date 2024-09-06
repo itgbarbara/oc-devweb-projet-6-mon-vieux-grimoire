@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator'); // Import d'un package permettant de vérifier le caractère unique d'une valeur
-// A INSTALLER SUR LE DOSSIER BACKEND AVEC LA COMMANDE 'npm install --save mongoose-unique-validator'
 
 const userSchema = mongoose.Schema({
   email: {
