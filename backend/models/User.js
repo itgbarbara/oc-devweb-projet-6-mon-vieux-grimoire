@@ -9,7 +9,7 @@ const userSchema = mongoose.Schema({
     unique: true,
   },
   password: {
-    // mot de passe haché de l'utilisateur
+    // Mot de passe haché de l'utilisateur
     type: String,
     required: true,
   },

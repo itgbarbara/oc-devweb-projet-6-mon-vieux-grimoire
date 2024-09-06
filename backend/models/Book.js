@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const uniqueValidator = require('mongoose-unique-validator'); // Import d'un package permettant de vérifier le caractère unique d'une valeur
+const uniqueValidator = require('mongoose-unique-validator'); // Permet de vérifier le caractère unique d'une valeur
 
 const bookSchema = mongoose.Schema({
   userId: {

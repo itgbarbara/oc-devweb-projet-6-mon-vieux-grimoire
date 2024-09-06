@@ -1,7 +1,7 @@
-const express = require('express'); // Import du package Express
+const express = require('express');
 
 // Import des middleware
-const userCtrl = require('../controllers/user');
+const userCtrl = require('../controllers/user'); // Exécution des actions dans la BDD 'User'
 
 // Création d'un router
 const router = express.Router();

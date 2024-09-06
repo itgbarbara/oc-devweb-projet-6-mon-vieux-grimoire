@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 
+// Import middleware
 const booksRoutes = require('./routes/books'); // Import du gestionnaire de route pour le chemin '/api/books'
 const userRoutes = require('./routes/user'); // Import du gestionnaire de route pour le chemin '/api/auth'
 const path = require('path');

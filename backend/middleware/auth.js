@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
     const decodedToken = jwt.verify(token, process.env.SECRET_KEY); // Décodage du token avec la clé secrète
     const userId = decodedToken.userId; // Extraction de la valeur de la propriété 'userId' du token décodé
     req.auth = {
-      // On rend l'userId disponible sur la propriété 'auth' de l'objet 'request', qui est transmis aux middleware suivants
+      // On rend l'userId disponible sur l'objet 'req.auth', qui est transmis aux middleware suivants
       userId: userId,
     };
     next();
